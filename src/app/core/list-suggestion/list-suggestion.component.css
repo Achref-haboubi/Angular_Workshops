@@ -1,0 +1,181 @@
+.search-input {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 25px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+
+/* RESET SIMPLE */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* TITRE */
+h2 {
+  text-align: center;
+  margin: 30px 0;
+  color: #2c3e50;
+}
+
+/* CARTE SUGGESTION */
+.suggestion-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.suggestion-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* TITRE DE LA SUGGESTION */
+.suggestion-card h3 {
+  margin-top: 0;
+  color: #1e293b;
+}
+
+/* TEXTE */
+.suggestion-card p {
+  margin: 6px 0;
+  color: #475569;
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+/* CATÉGORIE */
+.suggestion-card p:nth-of-type(3) {
+  font-weight: 600;
+  color: #2563eb;
+}
+
+/* DATE */
+.suggestion-card p:nth-of-type(4) {
+  font-style: italic;
+  color: #64748b;
+}
+
+/* STATUT */
+.suggestion-card p:nth-of-type(5) {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* LIKES */
+.suggestion-card p:nth-of-type(6) {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+/* BOUTONS */
+.suggestion-card button {
+  border: none;
+  padding: 10px 16px;
+  margin-right: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* BOUTON LIKE */
+.suggestion-card button:first-child {
+  background-color: #2563eb;
+  color: white;
+}
+
+.suggestion-card button:first-child:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.05);
+}
+
+/* BOUTON FAVORIS */
+.suggestion-card button:last-child {
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+.suggestion-card button:last-child:hover {
+  background-color: #e2e8f0;
+  transform: scale(1.05);
+}
+
+/* SÉPARATEUR */
+hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 18px;
+}
+
+/* TITRE FAVORIS */
+.fav-title {
+  max-width: 900px;
+  margin: 40px auto 15px;
+  color: #1e293b;
+}
+
+/* CONTENEUR FAVORIS */
+.favorites-container {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+/* CARTE FAVORI */
+.favorite-card {
+  background-color: #f8fafc;
+  border-radius: 10px;
+  padding: 14px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.favorite-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* TITRE FAVORI */
+.favorite-card h4 {
+  margin: 0;
+  font-size: 15px;
+  color: #2563eb;
+}
+
+/* CATÉGORIE */
+.favorite-card p {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* MESSAGE VIDE */
+.no-fav {
+  max-width: 900px;
+  margin: 20px auto;
+  text-align: center;
+  color: #94a3b8;
+  font-style: italic;
+}
+

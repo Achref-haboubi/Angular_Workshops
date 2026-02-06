@@ -1,0 +1,32 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAV */
+.nav {
+  height: 85px;
+  background-color: rgb(255, 34, 0);
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CONTENU */
+.content {
+  flex: 1; 
+  background-color: rgb(255, 249, 249);
+  padding: 20px;
+}
+
+/* FOOTER */
+.footer {
+  height: 85px;
+  background-color: rgb(255, 34, 0);
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
