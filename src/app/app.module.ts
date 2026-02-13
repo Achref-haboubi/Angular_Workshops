@@ -8,7 +8,9 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
-import { ListSuggestionComponent } from './core/list-suggestion/list-suggestion.component';
+import { ListSuggestionComponent } from './features/suggestions/list-suggestion/list-suggestion.component';
+import { SuggestionDetailsComponent } from './features/suggestions/suggestion-details/suggestion-details.component';
+import { NotfoundComponent } from './core/notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ListSuggestionComponent } from './core/list-suggestion/list-suggestion.
     NavComponent,
     HomeComponent,
     FooterComponent,
-    ListSuggestionComponent
+    ListSuggestionComponent,
+    SuggestionDetailsComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,

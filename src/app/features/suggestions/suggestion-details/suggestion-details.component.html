@@ -1,0 +1,40 @@
+<div *ngIf="suggestion" class="page">
+
+  <div class="card">
+
+    <div class="header">
+      <h2>{{ suggestion.title }}</h2>
+      <span class="badge"
+            [ngClass]="{
+              'accepted': suggestion.status === 'acceptée',
+              'refused': suggestion.status === 'refusée',
+              'pending': suggestion.status === 'en_attente'
+            }">
+        {{ suggestion.status }}
+      </span>
+    </div>
+
+    <div class="content">
+      <div class="row">
+        <label>Description</label>
+        <p>{{ suggestion.description }}</p>
+      </div>
+
+      <div class="row">
+        <label>Catégorie</label>
+        <p>{{ suggestion.category }}</p>
+      </div>
+
+      <div class="row">
+        <label>Date</label>
+        <p>{{ suggestion.date | date:'dd/MM/yyyy' }}</p>
+      </div>
+    </div>
+
+    <button routerLink="/listSuggestion" class="back-btn">
+      ← Retour à la liste
+    </button>
+
+  </div>
+
+</div>

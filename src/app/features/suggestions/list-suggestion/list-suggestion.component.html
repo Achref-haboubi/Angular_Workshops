@@ -16,8 +16,9 @@
   <p>{{ s.date | date:'dd/MM/yyyy' }}</p>
   <p>{{ s.status }}</p>
   <p>Likes : {{ s.nbLikes }}</p>
-
-  <div *ngIf="s.status !== 'refusée'">
+  <button [routerLink]="['/suggDetails', s.id]">See Details</button>
+  
+  <div *ngIf="s.status !== 'refusée'" class="like">
     <button (click)="likeSuggestion(s)">👍 Like</button>
     <button (click)="addToFavorites(s)">⭐ Ajouter aux favoris</button>
   </div>

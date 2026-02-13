@@ -1,18 +1,12 @@
-import { Component } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Suggestion } from '../../models/suggestion';
 
-@Component({
-  selector: 'app-list-suggestion',
-  templateUrl: './list-suggestion.component.html',
-  styleUrls: ['./list-suggestion.component.css']
+@Injectable({
+  providedIn: 'root'
 })
-export class ListSuggestionComponent {
+export class SuggestionService {
 
-  searchTerm: string = '';
-
-  favorites: Suggestion[] = [];
-
-  suggestions: Suggestion[] = [
+  private suggestions: Suggestion[] = [
     {
       id: 1,
       title: 'Organiser une journée team building',
@@ -51,20 +45,13 @@ export class ListSuggestionComponent {
     }
   ];
 
-  likeSuggestion(s: Suggestion) {
-    s.nbLikes++;
+  constructor() { }
+
+  getSuggestions(): Suggestion[] {
+    return this.suggestions;
   }
 
-  addToFavorites(s: Suggestion) {
-    if (!this.favorites.includes(s)) {
-      this.favorites.push(s);
-    }
-  }
-
-  filteredSuggestions(): Suggestion[] {
-    return this.suggestions.filter(s =>
-      s.title.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-      s.category.toLowerCase().includes(this.searchTerm.toLowerCase())
-    );
+  getSuggestionById(id: number): Suggestion | undefined {
+    return this.suggestions.find(s => s.id === id);
   }
 }

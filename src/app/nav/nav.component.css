@@ -1,0 +1,65 @@
+/* HEADER */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+  padding: 14px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Container */
+.app-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  gap: 50px;
+}
+
+/* LINKS */
+.menu a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #e0f2fe;
+  position: relative;
+  padding: 6px 0;
+  transition: all 0.25s ease;
+}
+
+/* Hover */
+.menu a:hover {
+  color: #ffffff;
+}
+
+/* Animated underline */
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #ffffff96;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.menu a:hover::after,
+.menu a.active::after {
+  width: 100%;
+}
+
+/* Active link */
+.menu a.active {
+  color: #ffffff;
+  font-weight: 600;
+}
