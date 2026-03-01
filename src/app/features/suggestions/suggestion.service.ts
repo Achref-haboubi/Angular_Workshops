@@ -45,7 +45,7 @@ export class SuggestionService {
     }
   ];
 
-  constructor() { }
+  constructor() {}
 
   getSuggestions(): Suggestion[] {
     return this.suggestions;
@@ -53,5 +53,9 @@ export class SuggestionService {
 
   getSuggestionById(id: number): Suggestion | undefined {
     return this.suggestions.find(s => s.id === id);
+  }
+
+  addSuggestion(suggestion: Suggestion): void {
+    this.suggestions.push(suggestion);
   }
 }

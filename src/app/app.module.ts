@@ -11,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ListSuggestionComponent } from './features/suggestions/list-suggestion/list-suggestion.component';
 import { SuggestionDetailsComponent } from './features/suggestions/suggestion-details/suggestion-details.component';
 import { NotfoundComponent } from './core/notfound/notfound.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { NotfoundComponent } from './core/notfound/notfound.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration()

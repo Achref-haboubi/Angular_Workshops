@@ -1,0 +1,68 @@
+<form class="form-container" [formGroup]="suggestionForm" (ngSubmit)="onSubmit()">
+
+  <!-- Titre -->
+  <div>
+    <label>Titre :</label>
+    <input type="text" formControlName="title">
+
+    <div *ngIf="suggestionForm.get('title')?.touched && suggestionForm.get('title')?.invalid">
+      <small *ngIf="suggestionForm.get('title')?.errors?.['required']">
+        Le titre est obligatoire.
+      </small>
+      <small *ngIf="suggestionForm.get('title')?.errors?.['minlength']">
+        Minimum 5 caractères.
+      </small>
+      <small *ngIf="suggestionForm.get('title')?.errors?.['pattern']">
+        Doit commencer par une majuscule et contenir uniquement des lettres.
+      </small>
+    </div>
+  </div>
+
+  <!-- Description -->
+  <div>
+    <label>Description :</label>
+    <textarea formControlName="description"></textarea>
+
+    <div *ngIf="suggestionForm.get('description')?.touched && suggestionForm.get('description')?.invalid">
+      <small *ngIf="suggestionForm.get('description')?.errors?.['required']">
+        La description est obligatoire.
+      </small>
+      <small *ngIf="suggestionForm.get('description')?.errors?.['minlength']">
+        Minimum 30 caractères.
+      </small>
+    </div>
+  </div>
+
+  <!-- Catégorie -->
+  <div>
+    <label>Catégorie :</label>
+    <select formControlName="category">
+      <option value="">-- Sélectionnez une catégorie --</option>
+      <option *ngFor="let cat of categories" [value]="cat">
+        {{ cat }}
+      </option>
+    </select>
+
+    <div *ngIf="suggestionForm.get('category')?.touched && suggestionForm.get('category')?.invalid">
+      <small>La catégorie est obligatoire.</small>
+    </div>
+  </div>
+
+  <!-- Date -->
+  <div>
+    <label>Date :</label>
+    <input type="text" formControlName="date" readonly>
+  </div>
+
+  <!-- Status -->
+  <div>
+    <label>Status :</label>
+    <input type="text" formControlName="status" readonly>
+  </div>
+
+  <!-- Bouton -->
+  <button type="submit" [disabled]="suggestionForm.invalid">
+    Soumettre
+  </button>
+
+</form>

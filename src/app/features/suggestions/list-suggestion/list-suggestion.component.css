@@ -182,3 +182,32 @@ hr {
 .like{
   margin-top: 10px;
 }
+
+/* BOUTON AJOUTER SUGGESTION */
+.add-btn {
+  display: block;
+  margin: 0 auto 25px;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.25);
+  transition: all 0.25s ease;
+}
+
+.add-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(37, 99, 235, 0.35);
+}
+
+.add-btn:active {
+  transform: scale(0.97);
+}
+
+.add-btn:focus {
+  outline: none;
+}
