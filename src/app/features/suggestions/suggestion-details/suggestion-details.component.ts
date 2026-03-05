@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Suggestion } from '../../../models/suggestion';
-import { SuggestionService } from '../suggestion.service';
+import { SuggestionService } from '../../../core/Services/suggestion.service';
 
 @Component({
   selector: 'app-suggestion-details',
@@ -18,9 +18,16 @@ export class SuggestionDetailsComponent {
   ) {}
 
   ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    console.log("ID récupéré :", id);
 
-    this.suggestion = this.suggestionService.getSuggestionById(id);
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+
+    this.suggestionService.getSuggestionById(id)
+      .subscribe((data: any) => {
+
+        this.suggestion = data.suggestion;
+
+      });
+
+
   }
 }

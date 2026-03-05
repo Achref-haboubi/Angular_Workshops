@@ -12,6 +12,7 @@ import { ListSuggestionComponent } from './features/suggestions/list-suggestion/
 import { SuggestionDetailsComponent } from './features/suggestions/suggestion-details/suggestion-details.component';
 import { NotfoundComponent } from './core/notfound/notfound.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { provideHttpClient } from '@angular/common/http';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    [provideHttpClient()]
   ],
   bootstrap: [AppComponent]
 })
